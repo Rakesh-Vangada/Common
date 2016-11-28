@@ -1,0 +1,20 @@
+M04 - deal dashboard
+go to reports- Price Expiry Report
+select distinct file_name from SCBT_T_IPS_TR_DATA_STREAM where business_date='23-Sep-2013' order by business_date desc     1 File
+select distinct file_name from SCBT_T_IPS_TR_DATASCOPE where business_date='23-Sep-2013'  order by business_date desc          5 File
+select distinct file_name from SCBT_T_IPS_TR_RMDS where business_date='23-Sep-2013'  order by business_date desc                      1 File
+
+unlocking a deal
+==================
+SCBT_T_SOFT_LOCK
+
+Reports
+==========
+server : PG543
+path: /prd/obiee/OracleBI/ReportsHistory
+cd /prd/obiee/OracleBI/ReportsHistory
+
+ls -lrt
+cd SG
+ls -lrt *Price*Expiry*Report*
+scp SG_Price_Expiry_Report_02-May-2013_.pdf cocosupp@10.20.223.141:/tmp
